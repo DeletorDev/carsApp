@@ -13,3 +13,5 @@
 /mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/obj/Debug/net6.0/carsApp.pdb
 /mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/obj/Debug/net6.0/carsApp.genruntimeconfig.cache
 /mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/obj/Debug/net6.0/ref/carsApp.dll
+/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/bin/Debug/net6.0/Newtonsoft.Json.dll
+/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/obj/Debug/net6.0/carsApp.csproj.CopyComplete

@@ -6,13 +6,13 @@
             "command": "dotnet",
             "type": "process",
             "args": [
-                "build",
+                "build", 
                 "${workspaceFolder}/carsApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
-        },
+        },        
         {
             "label": "publish",
             "command": "dotnet",

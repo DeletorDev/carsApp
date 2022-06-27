@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "T4r6iCiTkG7gGZdfRNuBAJbTuuxv0ceEErkWg/QcLKupMBCPypFZ2U8QEpFg9X0nb+mT0K9hK3nn+Uw+x8fQFg==",
+  "dgSpecHash": "4Kd8TCyZOgMHuA35dcUHfncLruqx6zw/4zo2/q4mR02f2p52khRXro4uF6lusoj4AywL66PIl0P0e4hfHo/ttw==",
   "success": true,
   "projectFilePath": "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/carsApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/deletor/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
