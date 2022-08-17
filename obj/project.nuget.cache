@@ -1,10 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "4Kd8TCyZOgMHuA35dcUHfncLruqx6zw/4zo2/q4mR02f2p52khRXro4uF6lusoj4AywL66PIl0P0e4hfHo/ttw==",
-  "success": true,
-  "projectFilePath": "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/carsApp.csproj",
-  "expectedPackageFiles": [
-    "/home/deletor/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
-  ],
-  "logs": []
+  "dgSpecHash": "6EGyE3yYw74Iy3/qbuMII92SMAPejCQxw/ArS/As1pKZh1WrwzxROfBczs6iQ/+a6IN05u3DQUK4KuG6B+QoDA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\carsApp.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Newtonsoft.Json (>= 13.0.1)' for 'net6.0'.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

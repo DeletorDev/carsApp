@@ -1,27 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/carsApp.csproj": {}
+    "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\carsApp.csproj": {}
   },
   "projects": {
-    "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/carsApp.csproj": {
+    "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\carsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/carsApp.csproj",
+        "projectUniqueName": "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\carsApp.csproj",
         "projectName": "carsApp",
-        "projectPath": "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/carsApp.csproj",
-        "packagesPath": "/home/deletor/.nuget/packages/",
-        "outputPath": "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/obj/",
+        "projectPath": "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\carsApp.csproj",
+        "packagesPath": "C:\\Users\\cesanche\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/deletor/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\cesanche\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
@@ -58,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }
