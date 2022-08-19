@@ -4,17 +4,25 @@ using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
  
-namespace CARS_TASK
+namespace Cars_NS
 {
     class Program
     {   
         //Get the Data in JSON Serialized Form
         static string carsData = JsonConvert.SerializeObject(new CarsDatabase(), Formatting.Indented);
-        //Console.WriteLine(carsData);
-
+        
         //Convert the JSON string into an Array
         static JArray carsArray = JArray.Parse(carsData);
 
+        static void Main(string[] args)
+        {   
+            bool showMenu = true;
+            while (showMenu)
+            {
+                showMenu = MainMenu();
+            }
+
+        }
         private static bool MainMenu()
         {
             Console.Clear();
@@ -27,7 +35,7 @@ namespace CARS_TASK
             Console.WriteLine(" 6) What's the average year?");
             Console.WriteLine(" 7) What's the newest year?");
             Console.WriteLine(" 8) What's the total amount of cars?");
-            Console.WriteLine(" 9) Show only the model names and the year");
+            Console.WriteLine(" 9) Show only the model names, and the year");
             Console.WriteLine("10) Show the year, model, and make");
             Console.WriteLine("11) What would the model name be if printed in reverse?");
             Console.WriteLine("12) Print out all the Chevy cars and all the properties, BUT, change Chevy to Chevrolet");
@@ -38,7 +46,7 @@ namespace CARS_TASK
             switch (Console.ReadLine())
             {
                 case "1":
-                    InsertCar();
+                    AddCar(carsArray);
                     return true;
                 case "2":
                     MakeCount();
@@ -82,42 +90,30 @@ namespace CARS_TASK
                     return true;
             }
         }
-        static void Main(string[] args)
-        {   
-            bool showMenu = true;
-            while (showMenu)
-            {
-                showMenu = MainMenu();
-            }                            
-        }
 
-        public static void InsertCar()
-        {
-            string make, model;
-            int year, engineSize;
-
+        public static void AddCar(JArray cars_array)
+        {                      
             Console.WriteLine("Method to create a car");
 
             Console.Write("\r\nCar Company: ");
-                make = Console.ReadLine();  
+                string make = Console.ReadLine();  
+            
             Console.Write("\r\nCar Model: ");
-                model = Console.ReadLine();
+                string model = Console.ReadLine();
+            
             Console.Write("\r\nCar Year: ");
-                year = int.Parse(Console.ReadLine());
+                int year = int.Parse(Console.ReadLine());
+            
             Console.Write("\r\nCar Engine Size: ");
-                engineSize = int.Parse(Console.ReadLine());
-
-            AddCar(carsArray, make, model, year, engineSize);
-        }
-        public static void AddCar(JArray cars_array, string? make, string? model, int year, int engineSize)
-        {
+                int engineSize = int.Parse(Console.ReadLine());
+            
             cars_array.Add(new JObject()        
             {
                 {"Make", make},
                 {"Model", model},
                 {"Year", year},
                 {"EngineSize", engineSize}
-            });            
+            });
         }
 
         public static void ListCars(string combination)
@@ -127,22 +123,23 @@ namespace CARS_TASK
                 YMOMA = Year, Model, Make
             */
 
-            var resCars = from c in carsArray
-                            select c;
-                                     
-            if (combination=="All") Console.WriteLine("Make \t Model \t Year \t Engine Size");
+            var resCars = carsArray.Select( c => c);
 
-            if (combination=="MOY") Console.WriteLine("Model \t Year");
-
-            if (combination=="YMOMA") Console.WriteLine("Year \t Model \t Make");
-
+            if (combination=="All")                
+                Console.WriteLine("Make \t\t Model \t\t Year \t\t Engine Size");
+            else if (combination=="MOY")
+                Console.WriteLine("Model \t\t Year");
+            else if (combination=="YMOMA") 
+                Console.WriteLine("Year \t\t Model \t\t Make");
+            
             foreach (var item in resCars)
             {
-                if (combination=="All") Console.WriteLine(item["Make"] +"\t"+ item["Model"] +"\t"+ (string)item["Year"] +"\t"+ item["EngineSize"]);                
-                
-                if (combination=="MOY") Console.WriteLine(item["Model"] +"\t"+ item["Year"]);
-
-                if (combination=="YMOMA")Console.WriteLine(item["Year"] +"\t"+ item["Model"] +"\t"+ item["Make"]);
+                if (combination=="All")
+                    Console.WriteLine(item["Make"] +"\t\t"+ item["Model"] +"\t\t"+ item["Year"] +"\t\t"+ item["EngineSize"]);                
+                else if (combination=="MOY") 
+                    Console.WriteLine(item["Model"] +"\t\t"+ item["Year"]);
+                else if (combination=="YMOMA")
+                    Console.WriteLine(item["Year"] +"\t\t"+ item["Model"] +"\t\t"+ item["Make"]);
 
             }
 
@@ -151,20 +148,22 @@ namespace CARS_TASK
 
         public static void MakeCount()
         {
-            var makeCount = from g in carsArray
-                                group g by g["Make"] into makeGroup                                 
-                                orderby makeGroup.Count() descending
-                            select new
-                            {
-                                Make = makeGroup.Key,
-                                Count = makeGroup.Count()                               
-                            };
-            
-            Console.WriteLine("Make \t Total of makes");          
-            foreach (dynamic item in makeCount)
+            var makeCount = carsArray.GroupBy (g => g["Make"])
+                                .OrderByDescending (makeGroup => makeGroup.Count ())
+                                .Select (
+                                    makeGroup =>
+                                        new 
+                                        {
+                                            Make = makeGroup.Key,
+                                            Count = makeGroup.Count ()
+                                        }
+                                );
+
+            Console.WriteLine("Make \t\t Total of makes");          
+            foreach (var item in makeCount)
             {
-                //Console.WriteLine(item);                
-                Console.WriteLine(item.Make + " \t " + item.Count);
+                                
+                Console.WriteLine(item.Make + " \t\t " + item.Count);
                 break;
             }
     
@@ -202,7 +201,7 @@ namespace CARS_TASK
                             .Select(a => a.Value<decimal>())
                             .Average();
 
-            Console.WriteLine("Average value for column "+ column +" is: "+avg);
+            Console.WriteLine("Average value for column "+ column +" is: "+string.Format("{0:N}",avg));
             Console.ReadLine();
         }
 

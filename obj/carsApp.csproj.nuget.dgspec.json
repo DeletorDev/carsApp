@@ -1,24 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\carsApp.csproj": {}
+    "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/carsApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\carsApp.csproj": {
+    "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/carsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\carsApp.csproj",
+        "projectUniqueName": "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/carsApp.csproj",
         "projectName": "carsApp",
-        "projectPath": "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\carsApp.csproj",
-        "packagesPath": "C:\\Users\\cesanche\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cesanche\\OneDrive - Microsoft\\LinuxFiles\\Dev\\carsApp\\carsApp\\obj\\",
+        "projectPath": "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/carsApp.csproj",
+        "packagesPath": "/home/deletor/.nuget/packages/",
+        "outputPath": "/mnt/c/Users/cesanche/OneDrive - Microsoft/LinuxFiles/Dev/carsApp/carsApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cesanche\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/deletor/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
@@ -37,7 +40,7 @@
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[9.0.1, )"
             }
           },
           "imports": [
@@ -50,12 +53,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.6, 6.0.6]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[6.0.6, 6.0.6]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.6, 6.0.6]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
         }
       }
     }
